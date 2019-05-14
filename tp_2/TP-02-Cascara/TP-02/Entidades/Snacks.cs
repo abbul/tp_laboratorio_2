@@ -8,32 +8,40 @@ namespace Entidades_2018
 {
     public class Snacks : Producto
     {
-        public Snacks(EMarca marca, string codigoDeBarras, ConsoleColor color)
-            : base(marca,codigoDeBarras, color)
+        private const int cantidadcalorias = 104;
+
+        /// <summary>
+        /// Pasa los parametros al constructor padre.
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="codigoDeBarras"></param>
+        /// <param name="color"></param>
+        public Snacks(EMarca marca, string codigoDeBarras, ConsoleColor color) : base(marca,codigoDeBarras, color)
         {
         }
+
         /// <summary>
-        /// Los snacks tienen 104 calorías
+        /// Retorna las calorias del objeto. Es una constante
         /// </summary>
-        public override short CantidadCalorias
+        public override short CantidadCalorias => cantidadcalorias;
+
+        /// <summary>
+        /// Muestra toda la informacion del Objeto Actual
+        /// </summary>
+        public sealed override string Mostrar
         {
             get
             {
-                return 104;
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendLine("SNACKS");
+                sb.AppendLine(base.Mostrar);
+                sb.AppendLine("CALORIAS: " + CantidadCalorias);
+                sb.AppendLine(" ");
+                sb.AppendLine("---------------------");
+
+                return Convert.ToString(sb);
             }
-        }
-
-        public override sealed string Mostrar()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine("SNACKS");
-            sb.AppendLine(base.Mostrar());
-            sb.AppendLine("CALORIAS: " + CantidadCalorias);
-            sb.AppendLine(" ");
-            sb.AppendLine("---------------------");
-
-            return Convert.ToString(sb);
         }
     }
 }

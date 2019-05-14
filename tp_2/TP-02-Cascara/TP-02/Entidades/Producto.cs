@@ -15,11 +15,11 @@ namespace Entidades_2018
         private string codigoDeBarras;
         private ConsoleColor colorPrimarioEmpaque;
 
-        public Producto(EMarca marca,  string codigoDeBarras, ConsoleColor color)
+        public Producto(EMarca marca, string codigoDeBarras, ConsoleColor colorPrimarioEmpaque)
         {
             this.marca = marca;
             this.codigoDeBarras = codigoDeBarras;
-            this.colorPrimarioEmpaque = color;
+            this.colorPrimarioEmpaque = colorPrimarioEmpaque;
         }
 
         public enum EMarca
@@ -27,22 +27,21 @@ namespace Entidades_2018
             Serenisima, Campagnola, Arcor, Ilolay, Sancor, Pepsico
         }
 
-        public EMarca Marca { get; }
-
         /// <summary>
-        /// ReadOnly: Retornará la cantidad de calorias del producto
+        /// Retornará la cantidad de calorias del producto. Metodo Abstract
         /// </summary>
-        public abstract short CantidadCalorias { get;  }
+        public abstract short CantidadCalorias { get; }
 
         /// <summary>
-        /// Publica todos los datos del Producto.
+        /// Publica todos los datos del Producto. Metodo Virtual
         /// </summary>
         /// <returns></returns>
-        public virtual string Mostrar()
-        {
-            return (string)this;
-        }
+        public virtual string Mostrar => (string)this;
 
+        /// <summary>
+        /// Al castear un Producto a string, convertirar toda su informacion a string.
+        /// </summary>
+        /// <param name="p"></param>
         public static explicit operator string(Producto p)
         {
             StringBuilder sb = new StringBuilder();
@@ -56,7 +55,7 @@ namespace Entidades_2018
         }
 
         /// <summary>
-        /// Dos productos son iguales si comparten el mismo código de barras
+        /// Compara dos productos. Son iguales si comparten el mismo código de barras
         /// </summary>
         /// <param name="v1"></param>
         /// <param name="v2"></param>
@@ -66,14 +65,11 @@ namespace Entidades_2018
             return (v1.codigoDeBarras == v2.codigoDeBarras) ? true : false;
         }
         /// <summary>
-        /// Dos productos son distintos si su código de barras es distinto
+        /// Compara dos productos. Son distintos sino comparten el mismo código de barras
         /// </summary>
         /// <param name="v1"></param>
         /// <param name="v2"></param>
         /// <returns></returns>
-        public static bool operator !=(Producto v1, Producto v2)
-        {
-            return (v1.codigoDeBarras != v2.codigoDeBarras) ? true : false;
-        }
+        public static bool operator !=(Producto v1, Producto v2) => !(v1.codigoDeBarras == v2.codigoDeBarras);
     }
 }

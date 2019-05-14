@@ -10,44 +10,48 @@ namespace Entidades_2018
     public class Leche : Producto
     {
         private ETipo tipo;
+        private const int cantidadcalorias = 20;
 
+        /// <summary>
+        /// Los tipos de leches posibles
+        /// </summary>
         public enum ETipo { Entera, Descremada }
 
         /// <summary>
-        /// Por defecto, TIPO será ENTERA
+        /// Pasa los parametros al constrcutor padre, excepto el "tipo". Sino se pasa el "tipo", por default es Entera.
         /// </summary>
         /// <param name="marca"></param>
-        /// <param name="patente"></param>
+        /// <param name="codigoDeBarras"></param>
         /// <param name="color"></param>
-
-        public Leche(EMarca marca, string codigoDeBarras, ConsoleColor color, ETipo tipo= ETipo.Entera)
+        /// <param name="tipo"></param>
+        public Leche(EMarca marca, string codigoDeBarras, ConsoleColor color, ETipo tipo = ETipo.Entera)
             : base(marca, codigoDeBarras, color)
         {
             this.tipo = tipo;
         }
 
         /// <summary>
-        /// Las leches tienen 20 calorías
+        /// Retorna las calorias del objeto. Es una constante
         /// </summary>
-        public override short CantidadCalorias
+        public override short CantidadCalorias => cantidadcalorias;
+
+        /// <summary>
+        /// Muestra toda la informacion del Objeto Actual
+        /// </summary>
+        public sealed override string Mostrar
         {
             get
             {
-                return 20;
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendLine("LECHE");
+                sb.AppendLine(base.Mostrar);
+                sb.AppendLine("CALORIAS: " + CantidadCalorias + " " + "TIPO: " + tipo);
+                sb.AppendLine(" ");
+                sb.AppendLine("---------------------");
+
+                return Convert.ToString(sb);
             }
-        }
-
-        public override sealed string Mostrar()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine("LECHE");
-            sb.AppendLine(base.Mostrar());
-            sb.AppendLine("CALORIAS: " + CantidadCalorias + " " + "TIPO: " + tipo);
-            sb.AppendLine(" ");
-            sb.AppendLine("---------------------");
-
-            return Convert.ToString(sb);
         }
     }
 }

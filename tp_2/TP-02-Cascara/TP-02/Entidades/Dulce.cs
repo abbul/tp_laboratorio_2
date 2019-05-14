@@ -8,31 +8,40 @@ namespace Entidades_2018
 {
     public class Dulce : Producto
     {
-        public Dulce(EMarca marca, string codigoDeBarras, ConsoleColor color): base(marca, codigoDeBarras, color)
+        private const int cantidadcalorias = 80;
+
+        /// <summary>
+        /// Pasa todos los parametros al constructor padre 
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="codigoDeBarras"></param>
+        /// <param name="color"></param>
+        public Dulce(EMarca marca, string codigoDeBarras, ConsoleColor color) : base(marca, codigoDeBarras, color)
         {
         }
 
         /// <summary>
-        /// Los dulces tienen 80 calorías
+        /// Retorna las calorias del objeto. Es una constante
         /// </summary>
-        public override short CantidadCalorias
+        public override short CantidadCalorias => cantidadcalorias;
+
+        /// <summary>
+        /// Muestra toda la informacion del Objeto Actual
+        /// </summary>
+        public override string Mostrar
         {
             get
             {
-                return 80;
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendLine("DULCE");
+                sb.AppendLine(base.Mostrar);
+                sb.AppendLine("CALORIAS: " + CantidadCalorias);
+                sb.AppendLine(" ");
+                sb.AppendLine("---------------------");
+
+                return Convert.ToString(sb);
             }
-        }
-        public override string Mostrar()
-        {
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine("DULCE");
-            sb.AppendLine(base.Mostrar());
-            sb.AppendLine("CALORIAS: " + CantidadCalorias);
-            sb.AppendLine(" ");
-            sb.AppendLine("---------------------");
-
-            return Convert.ToString(sb);
         }
     }
 }

@@ -9,29 +9,41 @@ namespace Entidades_2018
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    public class Changuito
+    public sealed class Changuito
     {
         private List<Producto> productos;
-        private int espacioDisponible;
+        private int capacidad;
+
+        /// <summary>
+        /// Todos los tipos de productos posibles.
+        /// </summary>
         public enum ETipo
         {
             Dulce, Leche, Snacks, Todos
         }
 
         #region "Constructores"
+        /// <summary>
+        /// Creamos una lista de productos.
+        /// </summary>
         private Changuito()
         {
             productos = new List<Producto>();
         }
-        public Changuito(int espacioDisponible) : this()
+
+        /// <summary>
+        /// Indicamos la capacidad maxima de productos que tendra nuestro Changuito
+        /// </summary>
+        /// <param name="capacidad"></param>
+        public Changuito(int capacidad) : this()
         {
-            this.espacioDisponible = espacioDisponible;
+            this.capacidad = capacidad;
         }
         #endregion
 
         #region "Sobrecargas"
         /// <summary>
-        /// Muestro el Changuito y TODOS los Productos
+        /// Muestro el Changuito y todos los Productos que tenga
         /// </summary>
         /// <returns></returns>
         public override string ToString()
@@ -43,8 +55,7 @@ namespace Entidades_2018
         #region "Métodos"
 
         /// <summary>
-        /// Expone los datos del elemento y su lista (incluidas sus herencias)
-        /// SOLO del tipo requerido
+        /// Expone los datos del changuito y sus elementos (solo del tipo requerido).
         /// </summary>
         /// <param name="c">Elemento a exponer</param>
         /// <param name="ETipo">Tipos predicatede ítems de la lista a mostrar</param>
@@ -54,12 +65,11 @@ namespace Entidades_2018
             StringBuilder sb = new StringBuilder();
             List<Producto> varios = ( Convert.ToString(tipo) == "Todos") ? c.productos : c.productos.FindAll(x => x.GetType().Name == Convert.ToString(tipo));
             
-            sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} posibles", c.productos.Count, c.espacioDisponible);
-            sb.AppendLine("");
+            sb.AppendFormat("INFORMACION: Tenemos {0} lugares ocupados de un total de {1} posibles \n\n", c.productos.Count, c.capacidad);
 
             foreach (Producto item in varios )
             {
-                sb.AppendLine(item.Mostrar());
+                sb.AppendLine(item.Mostrar);
             }
 
             return Convert.ToString(sb);
@@ -69,14 +79,14 @@ namespace Entidades_2018
 
         #region "Operadores"
         /// <summary>
-        /// Agregará un elemento a la lista
+        /// Agregará un producto a la lista
         /// </summary>
         /// <param name="c">Objeto donde se agregará el elemento</param>
         /// <param name="p">Objeto a agregar</param>
         /// <returns></returns>
         public static Changuito operator +(Changuito c, Producto p)
         {
-            if (c.productos.Count < c.espacioDisponible )
+            if (c.productos.Count < c.capacidad)
             {
                 foreach (Producto item in c.productos)
                 {
@@ -99,7 +109,7 @@ namespace Entidades_2018
         /// </summary>
         /// <param name="c">Objeto donde se quitará el elemento</param>
         /// <param name="p">Objeto a quitar</param>
-        /// <returns></returns>
+        /// <returns>El Changuito</returns>
         public static Changuito operator -(Changuito c, Producto p)
         {
             foreach (Producto item in c.productos.ToList() )
