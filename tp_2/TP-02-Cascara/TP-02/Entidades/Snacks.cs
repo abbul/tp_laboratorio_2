@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,25 +23,27 @@ namespace Entidades_2018
         /// <summary>
         /// Retorna las calorias del objeto. Es una constante
         /// </summary>
-        public override short CantidadCalorias => cantidadcalorias;
-
-        /// <summary>
-        /// Muestra toda la informacion del Objeto Actual
-        /// </summary>
-        public sealed override string Mostrar
+        public override short CantidadCalorias
         {
-            get
-            {
+          get { return cantidadcalorias;  }
+        }
+
+    /// <summary>
+    /// Muestra toda la informacion del Objeto Actual
+    /// </summary>
+    public override string Mostrar()
+       {
+            
                 StringBuilder sb = new StringBuilder();
 
                 sb.AppendLine("SNACKS");
-                sb.AppendLine(base.Mostrar);
+                sb.AppendLine(base.Mostrar());
                 sb.AppendLine("CALORIAS: " + CantidadCalorias);
                 sb.AppendLine(" ");
                 sb.AppendLine("---------------------");
 
                 return Convert.ToString(sb);
-            }
+            
         }
     }
 }

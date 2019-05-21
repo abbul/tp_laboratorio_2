@@ -17,3 +17,9 @@ C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\
 C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\obj\Debug\Entidades.pdb
 C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\bin\Debug\Entidades.dll
 C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\bin\Debug\Entidades.pdb
+C:\Users\alumno\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\bin\Debug\Entidades.dll
+C:\Users\alumno\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\bin\Debug\Entidades.pdb
+C:\Users\alumno\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\obj\Debug\Entidades.dll
+C:\Users\alumno\Desktop\tp_laboratorio_2\tp_2\TP-02-Cascara\TP-02\Entidades\obj\Debug\Entidades.pdb
