@@ -1,54 +1,28 @@
-CLASE DE Natacion POR NOMBRE COMPLETO: Lopez, Juan
-NACIONALIDAD: Argentino
+CLASE DE Programacion POR NOMBRE COMPLETO: Juarez , Roberto
+NACIONALIDAD:Argentino
 
-CARNET NÚMERO: 1
-CLASES DEL DÍA:
-Natacion
-Pilates
+Legajo Numero: 2
 
-ALUMNOS:
-NOMBRE COMPLETO: Suarez, Joaquin
-NACIONALIDAD: Extranjero
+Clases del dia: 
+Programacion
+Programacion
 
-CARNET NÚMERO: 7
+ALUMNOS: 
+NOMBRE COMPLETO: Lopez , Juan
+NACIONALIDAD:Argentino
 
-ESTADO DE CUENTA: Cuota al día
-TOMA CLASES DE Natacion
-<------------------------------------------------>
+Legajo Numero: 1
 
-CLASE DE Laboratorio POR NOMBRE COMPLETO: Juarez, Roberto
-NACIONALIDAD: Argentino
+ESTADO DE CUENTA: AlDia
+TOMA CLASE DE: Programacion
 
-LEGAJO NÚMERO: 2
-CLASES DEL DÍA:
-Legislacion
-Laboratorio
+NOMBRE COMPLETO: Gonzalez , Carlos
+NACIONALIDAD:Argentino
 
-ALUMNOS:
-NOMBRE COMPLETO: Suarez, Joaquin
-NACIONALIDAD: Extranjero
+Legajo Numero: 5
 
-LEGAJO NÚMERO: 7
+ESTADO DE CUENTA: AlDia
+TOMA CLASE DE: Programacion
 
-ESTADO DE CUENTA: Cuota al día
-TOMA CLASES DE Laboratorio
-<------------------------------------------------>
-
-CLASE DE Laboratorio POR NOMBRE COMPLETO: Lopez, Juan
-NACIONALIDAD: Argentino
-
-LEGAJO NÚMERO: 1
-CLASES DEL DÍA:
-Laboratorio
-Laboratorio
-
-ALUMNOS:
-NOMBRE COMPLETO: Suarez, Joaquin
-NACIONALIDAD: Extranjero
-
-LEGAJO NÚMERO: 7
-
-ESTADO DE CUENTA: Cuota al día
-TOMA CLASES DE Laboratorio
-<------------------------------------------------>
+<------------------------------------------->
 

@@ -1,0 +1,13 @@
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\obj\Debug\EntidadesInstanciables.csproj.CoreCompileInputs.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\obj\Debug\EntidadesInstanciables.csprojAssemblyReference.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.dll
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\bin\Debug\ClasesInstanciables.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\bin\Debug\ClasesAbstractas.dll
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\bin\Debug\Excepciones.dll
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\bin\Debug\ClasesAbstractas.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\bin\Debug\Excepciones.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\obj\Debug\EntidadesInstanciables.csproj.CopyComplete
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.dll
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\obj\Debug\ClasesInstanciables.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\bin\Debug\Archivos.dll
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_3\Rodriguez.Abbul.2D.TP3\ClasesInstanciables\bin\Debug\Archivos.pdb
