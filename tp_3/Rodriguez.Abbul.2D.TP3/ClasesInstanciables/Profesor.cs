@@ -7,6 +7,9 @@ using EntidadesAbstractas;
 
 namespace EntidadesInstanciables
 {
+    /// <summary>
+    /// Hereda de Universitario y Persona
+    /// </summary>
     public class Profesor : Universitario
     {
         private Queue<Universidad.EClases> clasesDelDia;
@@ -29,6 +32,9 @@ namespace EntidadesInstanciables
             _ramdomClases();
         }
 
+        /// <summary>
+        /// Cargan de forma ramdom 2 clases al profesor
+        /// </summary>
         private void _ramdomClases()
         {
             int numero;
@@ -40,6 +46,10 @@ namespace EntidadesInstanciables
             clasesDelDia.Enqueue((Universidad.EClases)numero);
         }
 
+        /// <summary>
+        /// Mostrara todas las clases que del dia para ese profesor
+        /// </summary>
+        /// <returns></returns>
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -52,16 +62,25 @@ namespace EntidadesInstanciables
             return Convert.ToString(sb);
         }
 
+        /// <summary>
+        /// Son iguales si el profesor da esa clase
+        /// </summary>
+        /// <param name="i"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
-            foreach (Universidad.EClases item in i.clasesDelDia)
+            if ( !ReferenceEquals(null, i) )
             {
-                if (item == clase)
+                foreach (Universidad.EClases item in i.clasesDelDia)
                 {
-                    return true;
+                    if (item == clase)
+                    {
+                        return true;
+                    }
                 }
             }
-
+            
             return false;
         }
 
@@ -70,12 +89,19 @@ namespace EntidadesInstanciables
             return !(i == clase);
         }
 
-
+        /// <summary>
+        /// Muestra la primera clase de la cola de clases.
+        /// </summary>
+        /// <returns></returns>
         protected override string ParticiparEnClase()
         {
             return "Clase del dia: " + clasesDelDia.Peek();
         }
 
+        /// <summary>
+        /// Muestra absolutamente todos los datos del objeto
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

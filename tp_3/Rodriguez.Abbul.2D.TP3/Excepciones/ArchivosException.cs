@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
+    /// <summary>
+    /// Se lanzar por cualquier Exception al momento de cargar o leer un archivo
+    /// </summary>
     public class ArchivosException : Exception
     {
         public ArchivosException(Exception innerException)

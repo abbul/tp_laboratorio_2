@@ -12,6 +12,12 @@ namespace Archivos
 {
     public class Xml<T> : IArchivo<T>
     {
+        /// <summary>
+        /// Guardar la informacion dada en un Serializado de XML
+        /// </summary>
+        /// <param name="archivo"></param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         public bool Guardar(string archivo, T datos)
         {
             bool flag = false;
@@ -23,13 +29,9 @@ namespace Archivos
                 serializador.Serialize(archivoReceptor, datos); // "datos" se serializarada dentro de "archivoReceptor".
                 flag = true;
             }
-            catch (ArchivosException exception)
-            {
-                throw exception.InnerException;
-            }
             catch (Exception exception)
             {
-                throw exception.InnerException;
+                throw new ArchivosException(exception);
             }
             finally
             {
@@ -39,6 +41,12 @@ namespace Archivos
             return flag;
         }
 
+        /// <summary>
+        /// Lee de un archivo serializado
+        /// </summary>
+        /// <param name="archivo"></param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         public bool Leer(string archivo, out T datos)
         {
             bool flag = false;
@@ -54,9 +62,9 @@ namespace Archivos
                 flag = true;
                 
             }
-            catch (ArchivosException exception)
+            catch (Exception exception)
             {
-                throw exception.InnerException;
+                throw new ArchivosException(exception);
             }
 
             finally

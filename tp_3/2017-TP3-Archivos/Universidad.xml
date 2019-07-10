@@ -5,7 +5,7 @@ NACIONALIDAD:Argentino
 Legajo Numero: 2
 
 Clases del dia: 
-Programacion
+Legislacion
 Programacion
 
 ALUMNOS: 
@@ -27,31 +27,31 @@ TOMA CLASE DE: Programacion
 
 <------------------------------------------->
 
-CLASE DE Programacion POR NOMBRE COMPLETO: Lopez , Juan
+CLASE DE Programacion POR NOMBRE COMPLETO: Juarez , Roberto
 NACIONALIDAD:Argentino
 
-Legajo Numero: 1
+Legajo Numero: 2
 
 Clases del dia: 
-Laboratorio
+Legislacion
 Programacion
 
 ALUMNOS: 
-NOMBRE COMPLETO: Perez , Juan
-NACIONALIDAD:Argentino
-
-Legajo Numero: 6
-
-ESTADO DE CUENTA: AlDia
-TOMA CLASE DE: Laboratorio
-
-NOMBRE COMPLETO: Suarez , Joaquin
+NOMBRE COMPLETO: Hernandez , Miguel
 NACIONALIDAD:Extranjero
 
-Legajo Numero: 7
+Legajo Numero: 4
 
 ESTADO DE CUENTA: AlDia
-TOMA CLASE DE: Laboratorio
+TOMA CLASE DE: Legislacion
+
+NOMBRE COMPLETO: Smith , Rodrigo
+NACIONALIDAD:Argentino
+
+Legajo Numero: 8
+
+ESTADO DE CUENTA: AlDia
+TOMA CLASE DE: Legislacion
 
 <------------------------------------------->
 

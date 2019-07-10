@@ -9,6 +9,9 @@ using Archivos;
 
 namespace EntidadesInstanciables
 {
+    /// <summary>
+    /// Clase principal del proyecto
+    /// </summary>
     public class Universidad
     {
         private List<Alumno> alumnos;
@@ -34,7 +37,7 @@ namespace EntidadesInstanciables
             get { return jornadas; }
             set { jornadas = value; }
         }
-        public List<Profesor> Profesores {
+        public List<Profesor> Instructores {
 
             get { return profesores; }
             set { profesores = value; }
@@ -52,6 +55,10 @@ namespace EntidadesInstanciables
 
         #endregion
 
+        /// <summary>
+        /// Muestra todos los datos de la universidad.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -66,6 +73,11 @@ namespace EntidadesInstanciables
             return Convert.ToString(sb);
         }
 
+        /// <summary>
+        /// Muestra los datos basicos
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <returns></returns>
         private string MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
@@ -75,6 +87,12 @@ namespace EntidadesInstanciables
             return Convert.ToString(sb);
         }
 
+        /// <summary>
+        /// Son iguales sin el almuno esta en la lista de la universidad
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="alu"></param>
+        /// <returns></returns>
         public static bool operator ==(Universidad uni, Alumno alu)
         {
             foreach (Alumno item in uni.Alumnos)
@@ -93,6 +111,12 @@ namespace EntidadesInstanciables
             return !(uni == alu);
         }
 
+        /// <summary>
+        /// Agrega un alumno solo sino existe en la lista
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="alu"></param>
+        /// <returns></returns>
         public static Universidad operator +(Universidad uni, Alumno alu)
         {
 
@@ -108,10 +132,16 @@ namespace EntidadesInstanciables
             return uni;
         }
 
+        /// <summary>
+        /// Son distintos sin el DNi cambia
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="profe"></param>
+        /// <returns></returns>
         public static bool operator ==(Universidad uni, Profesor profe)
         {
   
-            foreach (Profesor item in uni.Profesores)
+            foreach (Profesor item in uni.Instructores)
             {
                 if (item.Dni == profe.Dni)
                 {
@@ -127,46 +157,49 @@ namespace EntidadesInstanciables
             return !(uni == profe);
         }
 
+        /// <summary>
+        /// Agregara a un profesor solo si el profesor no existe en la lista
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="profe"></param>
+        /// <returns></returns>
         public static Universidad operator +(Universidad uni, Profesor profe)
         {
             if (uni != profe)
             {
-                uni.Profesores.Add(profe);
+                uni.Instructores.Add(profe);
             }
 
             return uni;
         }
 
+        /// <summary>
+        /// Son iguales si uno de los profesores da esa clase
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static Profesor operator ==(Universidad uni, EClases clase)
         {
-            bool flag = false;
-            Profesor profe=null;
 
-            foreach (Profesor item in uni.Profesores)
-            {
-                if (item == clase)
+                Profesor profe = null;
+
+                foreach (Profesor item in uni.Instructores)
                 {
-                    profe = item;
-                    flag = true;
+                    if (item == clase)
+                    {
+                        profe = item;
+                    }
                 }
-            }
 
-            if (flag)
-            {
                 return profe;
-            }
-            else
-            {
-                throw new SinProfesorException();
-            }
-
         }
 
         public static Profesor operator !=(Universidad uni, EClases clase)
         {
             Profesor profe = null;
 
-            foreach (Profesor item in uni.Profesores)
+            foreach (Profesor item in uni.Instructores)
             {
                 if (item != clase)
                 {
@@ -177,20 +210,25 @@ namespace EntidadesInstanciables
             return profe;
         }
 
+        /// <summary>
+        /// Agregagamos uns jornada con un profesor q de esa clases y todos los alumnos q cursen esa clase
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static Universidad operator +(Universidad uni, EClases clase)
         {
             try
             {
-                Profesor profe = uni == clase;
+                Profesor profe = (uni == clase);
                 Jornada jornada = new Jornada(clase, profe);
 
-                foreach (Alumno item in uni.Alumnos)
+                foreach (Alumno alumno in uni.Alumnos)
                 {
-                    if (item == clase)
+                    if (alumno == clase)
                     {
-                        jornada+= item;
+                        jornada+= alumno;
                     }
-                    
                 }
 
                 uni.Jornadas.Add(jornada);
@@ -201,7 +239,6 @@ namespace EntidadesInstanciables
                 throw e;
             }
 
-               
             return uni;
         }
 

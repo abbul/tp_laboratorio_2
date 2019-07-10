@@ -4,7 +4,7 @@ NACIONALIDAD:Argentino
 Legajo Numero: 2
 
 Clases del dia: 
-Programacion
+Legislacion
 Programacion
 
 ALUMNOS: 

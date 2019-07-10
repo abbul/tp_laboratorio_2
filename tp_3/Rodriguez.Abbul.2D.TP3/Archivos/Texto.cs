@@ -10,6 +10,12 @@ namespace Archivos
 {
     public static class Texto
     {
+        /// <summary>
+        /// Guardar la informacion dada en un archivo de texto
+        /// </summary>
+        /// <param name="archivo"></param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         public static bool Guardar(string archivo, string datos)
         {
             bool flag = false;
@@ -17,21 +23,15 @@ namespace Archivos
 
             try
             {
-
                 guardar.WriteLine(datos);
                 flag = true;
 
                 return flag;
 
             }
-            catch (ArchivosException exception)
-            {
-                throw exception.InnerException;
-            }
-
             catch (Exception exception)
             {
-                throw exception.InnerException;
+                throw new ArchivosException(exception);
             }
 
             finally
@@ -40,6 +40,12 @@ namespace Archivos
             }
         }
 
+        /// <summary>
+        /// Leer y carga la informacion en el variable dada
+        /// </summary>
+        /// <param name="archivo"></param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         public static bool Leer(string archivo, out string datos)
         {
             bool flag = false;
@@ -57,14 +63,9 @@ namespace Archivos
                 return flag;
 
             }
-            catch (ArchivosException exception)
-            {
-                throw exception.InnerException;
-            }
-
             catch (Exception exception)
             {
-                throw exception.InnerException;
+                throw new ArchivosException(exception);
             }
 
             finally

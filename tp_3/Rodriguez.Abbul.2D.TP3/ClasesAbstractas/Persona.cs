@@ -8,6 +8,9 @@ using Excepciones;
 
 namespace EntidadesAbstractas
 {
+    /// <summary>
+    /// Clase abstract, suele ser clase padre de Universitario
+    /// </summary>
     public abstract class Persona
     {
         private string nombre;
@@ -41,6 +44,7 @@ namespace EntidadesAbstractas
             Nacionalidad = nacionalidad;
             StringToDNI = dni;
         }
+
 
         public string Nombre {
             get { return nombre;  }
@@ -97,6 +101,11 @@ namespace EntidadesAbstractas
             }
         }
 
+        /// <summary>
+        /// Valida que el nombre y apellido solo contengan letras
+        /// </summary>
+        /// <param name="cadena"></param>
+        /// <returns></returns>
         private static bool ValidaNombreApellido(string cadena)
         {
             bool resultado = Regex.IsMatch(cadena, @"^[a-zA-Z]+$");
@@ -104,6 +113,10 @@ namespace EntidadesAbstractas
             return resultado;
         }
 
+        /// <summary>
+        /// mostramos todos los datos del objeto.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();
@@ -113,6 +126,12 @@ namespace EntidadesAbstractas
             return Convert.ToString(datos);
         }
 
+        /// <summary>
+        /// valida que el dni cumpla con los parametros logicos
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private int ValidaDni(ENacionalidad nacionalidad, int dato)
         {
             int salida;
@@ -140,6 +159,12 @@ namespace EntidadesAbstractas
             return salida;
         }
 
+        /// <summary>
+        /// valida que el dni cumpla con los parametros logicos
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private int ValidaDni(ENacionalidad nacionalidad, string dato)
         {
             int salida;

@@ -4,7 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Excepciones{
+namespace Excepciones
+{
+    /// <summary>
+    /// Se lanza cuando el DNI no cumple con la cantidad de caracteres o cuando esta fuera del rango logico.
+    /// </summary>
     public class DniInvalidoException : Exception
     {
 

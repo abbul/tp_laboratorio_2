@@ -8,6 +8,9 @@ using Excepciones;
 
 namespace EntidadesInstanciables
 {
+    /// <summary>
+    /// Hereda de Universitario y Persona
+    /// </summary>
     public class Alumno : Universitario
     {
         private Universidad.EClases claseQueToma;
@@ -64,6 +67,10 @@ namespace EntidadesInstanciables
 
         }
 
+        /// <summary>
+        /// muestra solo los atributos declarados en este objecto.
+        /// </summary>
+        /// <returns></returns>
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -74,6 +81,12 @@ namespace EntidadesInstanciables
             return Convert.ToString(sb);
         }
 
+        /// <summary>
+        /// Seran iguales solo si el alumno esta en esa clase y si no es un deudor
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
             return (a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor ) ? true : false;
@@ -84,11 +97,19 @@ namespace EntidadesInstanciables
             return !(a == clase);
         }
 
+        /// <summary>
+        /// Retorna la clase que toma el alumno
+        /// </summary>
+        /// <returns></returns>
         protected override string ParticiparEnClase()
         {
             return Convert.ToString(claseQueToma);
         }
 
+        /// <summary>
+        /// Retorna las propiedades declaradas en este objeto
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

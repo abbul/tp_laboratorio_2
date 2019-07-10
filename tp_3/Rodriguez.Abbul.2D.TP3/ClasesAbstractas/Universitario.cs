@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 using Excepciones;
 
 namespace EntidadesAbstractas
-{
+{   
+    /// <summary>
+    /// Clase abstract, hija de Persona
+    /// </summary>
     public abstract class Universitario : Persona
     {
         private int legajo;
@@ -38,6 +41,10 @@ namespace EntidadesAbstractas
             return base.Equals(obj);
         }
 
+        /// <summary>
+        /// muestra solo los atributos declarados en este objecto.
+        /// </summary>
+        /// <returns></returns>
         protected virtual string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
@@ -47,6 +54,12 @@ namespace EntidadesAbstractas
             return Convert.ToString(sb);
         }
 
+        /// <summary>
+        /// Seran iguales solo si son del mismo tipo y si el DNI ó Legajo son iguales.
+        /// </summary>
+        /// <param name="pg1"></param>
+        /// <param name="pg2"></param>
+        /// <returns></returns>
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
             bool flag=false;
