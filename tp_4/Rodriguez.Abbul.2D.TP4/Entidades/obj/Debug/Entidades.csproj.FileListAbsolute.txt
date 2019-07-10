@@ -1,0 +1,2 @@
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
