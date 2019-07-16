@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    public delegate void DelegadoEstado(object sender,EventArgs e);
+
     public class Paquete : IMostrar<Paquete>
     {
         private string direccionEntrega;
         private EEstado estado;
         private string trakingID;
+        private event DelegadoEstado InformaEstado;
 
         public Paquete(string direccionEntrega, string trakingID)
         {
@@ -29,7 +32,7 @@ namespace Entidades
 
         public void MockCicloDeVida()
         {
-            Thread.Sleep(4000);
+           
         }
         /// <summary>
         /// PUEDO TENER UN ERROR ACA.... MODIFIQUE EL TIPO DE PARAMETRO
