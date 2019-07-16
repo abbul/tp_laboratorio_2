@@ -45,7 +45,7 @@ namespace MainCorreo
             {
                 string datosElemento = elemento.MostrarDatos(elemento);
                 // Muestro los datos del elemento por pantalla
-                this.rTbMostrar.Text = datosElemento;
+                this.rtbMostrar.Text = datosElemento;
 
                 // Guardo los datos del elemento en un archivo
                 datosElemento.Guardar("salida.txt");
@@ -118,7 +118,15 @@ namespace MainCorreo
         {
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEgresado.SelectedItem);
         }
-       
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LstIngresado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

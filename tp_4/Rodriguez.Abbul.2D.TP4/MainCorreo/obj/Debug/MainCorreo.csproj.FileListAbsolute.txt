@@ -70,3 +70,17 @@ C:\Users\AstrobertoAbbulRodri\Desktop\XXXXXXXX\tp_laboratorio_2\TP4\MainCorreo\o
 C:\Users\AstrobertoAbbulRodri\Desktop\XXXXXXXX\tp_laboratorio_2\TP4\MainCorreo\obj\Debug\MainCorreo.csproj.CopyComplete
 C:\Users\AstrobertoAbbulRodri\Desktop\XXXXXXXX\tp_laboratorio_2\TP4\MainCorreo\obj\Debug\MainCorreo.exe
 C:\Users\AstrobertoAbbulRodri\Desktop\XXXXXXXX\tp_laboratorio_2\TP4\MainCorreo\obj\Debug\MainCorreo.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\bin\Debug\MainCorreo.exe.config
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\bin\Debug\MainCorreo.exe
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\bin\Debug\MainCorreo.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\bin\Debug\TrabajoPractico 4 - Yaggi.dll
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\bin\Debug\TrabajoPractico 4 - Yaggi.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\bin\Debug\TrabajoPractico 4 - Yaggi.dll.config
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\obj\Debug\MainCorreo.csprojAssemblyReference.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\obj\Debug\MainCorreo.Form1.resources
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\obj\Debug\MainCorreo.Properties.Resources.resources
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\obj\Debug\MainCorreo.csproj.GenerateResource.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\obj\Debug\MainCorreo.csproj.CopyComplete
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\obj\Debug\MainCorreo.exe
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\MainCorreo\obj\Debug\MainCorreo.pdb

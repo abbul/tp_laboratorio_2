@@ -29,17 +29,23 @@ namespace Entidades
         {
             foreach (Thread hilo in mockPaquetes)
             {
-                hilo.Interrupt();
+                hilo.Abort();
             }
         }
 
+        /// <summary>
+        /// PUEDO TENER UN ERROR; validar
+        /// </summary>
+        /// <param name="elementos"></param>
+        /// <returns></returns>
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
             string cadena=null;
+            Correo correo = (Correo)elementos;
 
-            foreach (Paquete item in elementos)
+            foreach (Paquete item in correo.paquetes)
             {
-                cadena+= String.Format("{0} para {1} ({2})", p.TrackingID, p.DireccionEntrega, p.Estado.ToString());
+                cadena+= String.Format("{0} para {1} ({2}) \n", item.TrackingID, item.DireccionEntrega, item.Estado.ToString());
             }
 
             return cadena;
@@ -53,10 +59,13 @@ namespace Entidades
             if (c != p)
             {
                 c.paquetes.Add(p);
+                Thread hiloDelPaquete = new Thread(p.MockCicloDeVida);
+                c.mockPaquetes.Add(hiloDelPaquete);
+                hiloDelPaquete.Start();
             }
             else
             {
-                throw new TrackingIdRepetidoException("El Traking ID " + p.TrakingID + "ya figura en la lista de envios");
+                throw new TrackingIdRepetidoException("El Traking ID " + p.TrackingID + "ya figura en la lista de envios");
             }
 
             return c;
@@ -68,7 +77,7 @@ namespace Entidades
 
             foreach (Paquete item in c.Paquetes)
             {
-                if (item.TrakingID == p.TrakingID)
+                if (item.TrackingID == p.TrackingID)
                 {
                     flag = true;
                     break;
