@@ -52,36 +52,18 @@ namespace Entidades_2018
         /// <returns></returns>
         public static string Mostrar(Changuito c, ETipo tipo)
         {
+
             StringBuilder sb = new StringBuilder();
-            int buffer=0;
+            List<Producto> varios = (tipo == ETipo.Todos) ? c.productos : c.productos.FindAll(x => x.GetType().Name == Convert.ToString(tipo));
+
 
             sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", c.productos.Count, c.espacioDisponible);
             sb.AppendLine("");
 
-            switch (tipo)
-            {
-                case ETipo.Dulce:
-                    buffer = 80;
-                    break;
-                case ETipo.Leche:
-                    buffer = 20;
-                    break;
-                case ETipo.Snacks:
-                    buffer = 104;
-                    break;
-            }
 
-            // Aprovechar polimorfismo
-            foreach (Producto v in c.productos)
+            foreach (Producto item in varios)
             {
-                if (buffer == v.CantidadCalorias)
-                {
-                    sb.AppendLine(v.Mostrar());
-                }  
-                else if(buffer == 0)
-                {
-                    sb.AppendLine(v.Mostrar());
-                }
+                sb.AppendLine(item.Mostrar());
             }
 
             return Convert.ToString(sb);

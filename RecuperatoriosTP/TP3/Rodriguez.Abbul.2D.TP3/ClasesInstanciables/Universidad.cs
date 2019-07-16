@@ -17,7 +17,7 @@ namespace EntidadesInstanciables
         private List<Alumno> alumnos;
         private List<Jornada> jornadas;
         private List<Profesor> profesores;
-        private const string path = "C:/Users/AstrobertoAbbulRodri/Desktop/tp_laboratorio_2/tp_3/2017-TP3-Archivos/Universidad.xml";
+        private const string path = "../../../Jornada.txt";
 
         public Universidad()
         {
@@ -49,7 +49,8 @@ namespace EntidadesInstanciables
             }
 
             set {
-                jornadas[i] = value;
+
+                    jornadas[i] = value;                
             }
         }
 
@@ -244,17 +245,47 @@ namespace EntidadesInstanciables
 
         public static bool Guardar(Universidad uni)
         {
-            return Texto.Guardar(path, uni.ToString());
+
+            bool salida = false;
+
+            try
+            {
+                salida = Texto.Guardar(path, uni.ToString());
+            }
+            catch (ArchivosException e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return salida;
         }
 
         public Universidad Leer()
         {
             Xml<Universidad> readerImporter = new Xml<Universidad>();
-            Universidad retorno;
+            Universidad retorno=null;
 
-            readerImporter.Leer(path, out retorno);
+            try
+            {
+                readerImporter.Leer(path, out retorno);
+
+            }
+            catch (ArchivosException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             return retorno;
+
         }
 
         public enum EClases

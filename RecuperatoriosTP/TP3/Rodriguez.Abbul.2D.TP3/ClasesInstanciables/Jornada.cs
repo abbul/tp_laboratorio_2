@@ -17,7 +17,8 @@ namespace EntidadesInstanciables
         private List<Alumno> alumnos;
         private Universidad.EClases clase;
         private Profesor instructor;
-        private const string path = "C:/Users/AstrobertoAbbulRodri/Desktop/tp_laboratorio_2/tp_3/2017-TP3-Archivos/Jornada.txt";
+        private const string path="../../../Jornada.txt";
+        
 
         private Jornada()
         {
@@ -33,7 +34,7 @@ namespace EntidadesInstanciables
             }
             catch (SinProfesorException e)
             {
-                throw e;
+                throw new SinProfesorException();
             }
             
         }
@@ -51,7 +52,7 @@ namespace EntidadesInstanciables
             get { return instructor; }
             set
             {
-                if (value == clase)
+                if (value == Clase)
                 {
                     instructor = value;
                 }
@@ -71,7 +72,24 @@ namespace EntidadesInstanciables
         /// <returns></returns>
         public static bool Guardar(Jornada jornada)
         {
-            return Texto.Guardar(path, jornada.ToString());
+            bool salida = false;
+
+            try
+            {
+                salida= Texto.Guardar(path, jornada.ToString());
+            }
+            catch (ArchivosException e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            return salida;
+
         }
 
         /// <summary>
@@ -87,10 +105,15 @@ namespace EntidadesInstanciables
                 Texto.Leer(path, out buffer);
                 
             }
+            catch (ArchivosException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+
             return buffer;
         }
 

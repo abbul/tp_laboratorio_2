@@ -16,6 +16,7 @@ namespace EntidadesInstanciables
         private Universidad.EClases claseQueToma;
         private EEstadoCuenta estadoCuenta;
 
+        #region #CONSTRUCTORES#
         public Alumno()
         {
             try
@@ -66,6 +67,8 @@ namespace EntidadesInstanciables
             }
 
         }
+
+        #endregion #CONSTRUCTORES#
 
         /// <summary>
         /// muestra solo los atributos declarados en este objecto.

@@ -1,0 +1,12 @@
+CLASE DE Programacion POR NOMBRE COMPLETO: Perez , Seba
+NACIONALIDAD:Argentino
+
+Legajo Numero: 1
+
+Clases del dia: 
+Programacion
+Legislacion
+
+ALUMNOS: 
+<------------------------------------------->
+

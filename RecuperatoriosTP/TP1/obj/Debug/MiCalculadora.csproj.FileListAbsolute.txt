@@ -24,3 +24,16 @@ C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_1\obj\Debug\MiCalculad
 C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_1\obj\Debug\MiCalculadora.csproj.CopyComplete
 C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_1\obj\Debug\FormCalculadora.exe
 C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_1\obj\Debug\FormCalculadora.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\bin\Debug\FormCalculadora.exe.config
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\bin\Debug\FormCalculadora.exe
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\bin\Debug\FormCalculadora.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\bin\Debug\Entidades.dll
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\bin\Debug\Entidades.pdb
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\obj\Debug\FormCalculadora.FormCalculadora.resources
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\obj\Debug\FormCalculadora.Properties.Resources.resources
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\obj\Debug\FormCalculadora.exe
+C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\RecuperatoriosTP\TP1\obj\Debug\FormCalculadora.pdb

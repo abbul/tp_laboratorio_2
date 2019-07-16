@@ -115,6 +115,10 @@ namespace Entidades
 
         public static double operator /(Numero n1, Numero n2)
         {
+            if (n2.numero==0)
+            {
+                return double.MaxValue;
+            }
             return n1.numero / n2.numero;
         }
 
