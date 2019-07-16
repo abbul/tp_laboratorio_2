@@ -1,4 +1,0 @@
-C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\TestUnitarios\obj\Debug\netcoreapp2.1\TestUnitarios.csprojAssemblyReference.cache
-C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\TestUnitarios\obj\Debug\netcoreapp2.1\TestUnitarios.csproj.CoreCompileInputs.cache
-C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\TestUnitarios\obj\Debug\netcoreapp2.1\TestUnitarios.AssemblyInfoInputs.cache
-C:\Users\AstrobertoAbbulRodri\Desktop\tp_laboratorio_2\tp_4\Rodriguez.Abbul.2D.TP4\TestUnitarios\obj\Debug\netcoreapp2.1\TestUnitarios.AssemblyInfo.cs
