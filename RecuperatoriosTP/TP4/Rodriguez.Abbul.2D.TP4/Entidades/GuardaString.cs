@@ -9,20 +9,23 @@ namespace Entidades
 {
     public static class GuardaString
     {
-        public static bool Guardar(this string texto, string archivo)
+
+        public static bool Guardar(this string datos, string archivo)
         {
+            bool flag = false;
             StreamWriter guardar = new StreamWriter(archivo); //Leeremos el archivo
 
             try
             {
-                guardar.WriteLine(texto);
+                guardar.WriteLine(datos);
+                flag = true;
 
-                return true;
+                return flag;
 
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                return false;
+                throw exception;
             }
 
             finally
@@ -31,4 +34,6 @@ namespace Entidades
             }
         }
     }
+
+
 }

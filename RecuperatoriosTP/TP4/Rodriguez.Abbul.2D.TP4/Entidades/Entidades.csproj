@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDeDatosException.cs" />
     <Compile Include="Correo.cs" />
     <Compile Include="GuardaString.cs" />
     <Compile Include="IMostrar.cs" />
+    <Compile Include="Notifica.cs" />
     <Compile Include="Paquete.cs" />
     <Compile Include="PaqueteDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

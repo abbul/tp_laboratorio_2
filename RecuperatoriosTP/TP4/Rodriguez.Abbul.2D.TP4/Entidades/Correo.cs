@@ -55,17 +55,30 @@ namespace Entidades
 
         public static Correo operator +(Correo c, Paquete p)
         {
-
-            if (c != p)
+            try
             {
-                c.paquetes.Add(p);
-                Thread hiloDelPaquete = new Thread(p.MockCicloDeVida);
-                c.mockPaquetes.Add(hiloDelPaquete);
-                hiloDelPaquete.Start();
+                if (c != p)
+                {
+                    c.paquetes.Add(p);
+                    Thread hiloDelPaquete = new Thread(p.MockCicloDeVida);
+                    c.mockPaquetes.Add(hiloDelPaquete);
+                    hiloDelPaquete.Start();
+                }
+                else
+                {
+                    throw new TrackingIdRepetidoException("El Traking ID " + p.TrackingID + "ya figura en la lista de envios");
+                }
             }
-            else
+            catch (BaseDeDatosException error)
             {
-                throw new TrackingIdRepetidoException("El Traking ID " + p.TrackingID + "ya figura en la lista de envios");
+
+                throw error;
+            }
+
+            catch (Exception error)
+            {
+
+                throw error;
             }
 
             return c;

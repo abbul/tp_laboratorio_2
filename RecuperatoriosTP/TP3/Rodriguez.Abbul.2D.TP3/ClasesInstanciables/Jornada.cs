@@ -17,7 +17,7 @@ namespace EntidadesInstanciables
         private List<Alumno> alumnos;
         private Universidad.EClases clase;
         private Profesor instructor;
-        private const string path="../../../Jornada.txt";
+        private static string path;
         
 
         private Jornada()
@@ -73,6 +73,7 @@ namespace EntidadesInstanciables
         public static bool Guardar(Jornada jornada)
         {
             bool salida = false;
+            path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Jornada.txt";
 
             try
             {
@@ -99,6 +100,7 @@ namespace EntidadesInstanciables
         public string Leer()
         {
             string buffer=null;
+            path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Jornada.txt";
 
             try
             {

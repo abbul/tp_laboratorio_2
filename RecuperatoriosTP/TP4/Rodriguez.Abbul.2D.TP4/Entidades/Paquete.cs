@@ -41,26 +41,33 @@ namespace Entidades
 
         public void MockCicloDeVida()
         {
-            do
+            try
             {
-                switch (estado)
+                do
                 {
-                    case EEstado.Ingresado:
-                        Thread.Sleep(4000);
-                        estado = EEstado.EnViaje;
-                        InformarEstado(this, new EventArgs());
-                        break;
+                    switch (estado)
+                    {
+                        case EEstado.Ingresado:
+                            Thread.Sleep(4000);
+                            estado = EEstado.EnViaje;
+                            InformarEstado(this, new EventArgs());
+                            break;
 
-                    case EEstado.EnViaje:
-                        Thread.Sleep(4000);
-                        estado = EEstado.Entregado;
-                        InformarEstado(this, new EventArgs());
-                        break;
-                }
+                        case EEstado.EnViaje:
+                            Thread.Sleep(4000);
+                            estado = EEstado.Entregado;
+                            InformarEstado(this, new EventArgs());
+                            break;
+                    }
 
-            } while (estado != EEstado.Entregado);
+                } while (estado != EEstado.Entregado);
 
-            PaqueteDAO.Insertar(this);
+                PaqueteDAO.Insertar(this);
+            }
+            catch (Exception error)
+            {
+                Notifica.Send( error.Message,ETipoExcepcion.sql );
+            }
 
         }
         /// <summary>

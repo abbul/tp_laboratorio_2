@@ -17,7 +17,7 @@ namespace EntidadesInstanciables
         private List<Alumno> alumnos;
         private List<Jornada> jornadas;
         private List<Profesor> profesores;
-        private const string path = "../../../Jornada.txt";
+        private static string path;
 
         public Universidad()
         {
@@ -246,11 +246,15 @@ namespace EntidadesInstanciables
         public static bool Guardar(Universidad uni)
         {
 
+            path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Universidad.xml";
+
             bool salida = false;
 
             try
             {
-                salida = Texto.Guardar(path, uni.ToString());
+                Xml<Universidad> xml = new Xml<Universidad>();
+
+                salida = xml.Guardar(path, uni);
             }
             catch (ArchivosException e)
             {
@@ -269,6 +273,8 @@ namespace EntidadesInstanciables
         {
             Xml<Universidad> readerImporter = new Xml<Universidad>();
             Universidad retorno=null;
+
+            path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Universidad.xml";
 
             try
             {

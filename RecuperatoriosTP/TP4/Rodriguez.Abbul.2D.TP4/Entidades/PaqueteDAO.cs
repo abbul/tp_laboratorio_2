@@ -24,6 +24,7 @@ namespace Entidades
             {
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
+                //conexionParaSqlServer
 
                 string cadena;
                 cadena = String.Format("INSERT INTO Paquetes (direccionEntrega,trakingID,alumno) VALUES ('{0}',{1},'{2}'", p.DireccionEntrega, p.TrackingID, "Rodriguez_Abbul_2D");
@@ -33,12 +34,11 @@ namespace Entidades
 
                 return (comando.ExecuteNonQuery() > 0) ? true : false;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
+                throw new Exception(ex.Message);
             }
-            
-        }
 
+        }
     }
 }

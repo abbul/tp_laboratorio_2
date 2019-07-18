@@ -22,18 +22,31 @@ namespace Vista
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            Paquete paquete = new Paquete(txtDireccion.Text,mtxtTrackingID.Text);
-            paquete.InformarEstado += paq_InformaEstado;
-
             try
             {
-                correo += paquete;
+                string dirrecion = txtDireccion.Text;
+                string id = mtxtTrackingID.Text;
+
+                if (dirrecion.Length > 0 && id.Length == 12 )
+                {
+                    Paquete paquete = new Paquete(dirrecion, id);
+                    paquete.InformarEstado += paq_InformaEstado;
+                    correo += paquete;
+                }
+                else
+                {
+                    MessageBox.Show("Valor En Nulo o Incompleto");
+                }
+                
+            }
+            catch (BaseDeDatosException error)
+            {
+                MessageBox.Show("Error db: " + error.Message);
             }
             catch (Exception)
             {
                 MessageBox.Show("Ya existe ese Tracking ID. ID ingresado:" + mtxtTrackingID.Text);
             }
-            
 
             ActualizarEstados();
         }

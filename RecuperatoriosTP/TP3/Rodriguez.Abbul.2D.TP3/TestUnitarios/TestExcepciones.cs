@@ -2,6 +2,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EntidadesInstanciables;
 using Excepciones;
 using Archivos;
+using System;
+
+
 
 namespace TestUnitarios
 {
@@ -33,10 +36,23 @@ namespace TestUnitarios
         [TestMethod]
         [ExpectedException(typeof(ArchivosException))]
         // patron idela para los test unitarios: AAA(Arrange, Act,Assert)
-        public void Archivos()
+        public void ArchivosXml()
         {
             Universidad uni = new Universidad();
-            uni.Leer();
+            Xml<Universidad> readerImporter = new Xml<Universidad>();
+
+            readerImporter.Leer("asd", out uni);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArchivosException))]
+        // patron idela para los test unitarios: AAA(Arrange, Act,Assert)
+        public void ArchivosTxt()
+        {
+            string buffer;
+
+            Texto.Leer("asdasd", out buffer);
+
         }
 
         [TestMethod]

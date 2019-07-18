@@ -49,16 +49,20 @@ namespace Archivos
         public static bool Leer(string archivo, out string datos)
         {
             bool flag = false;
-            StreamReader leerArchivo = new StreamReader(archivo, Encoding.UTF8);  //Leeremos el archivo
 
             try
             {
+                StreamReader leerArchivo = new StreamReader(archivo, Encoding.UTF8);
+
                 do
                 {
+                   
                     datos = leerArchivo.ReadLine();
                     flag = true;
 
                 } while (leerArchivo.EndOfStream == true);
+
+                leerArchivo.Close();
 
                 return flag;
 
@@ -67,11 +71,6 @@ namespace Archivos
             {
                 throw new ArchivosException(exception);
             }
-
-            finally
-            {
-                leerArchivo.Close();
-            } 
         }
     }
 }
