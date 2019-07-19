@@ -4,8 +4,8 @@ NACIONALIDAD:Argentino
 Legajo Numero: 2
 
 Clases del dia: 
+Laboratorio
 Programacion
-Legislacion
 
 ALUMNOS: 
 NOMBRE COMPLETO: Lopez , Juan

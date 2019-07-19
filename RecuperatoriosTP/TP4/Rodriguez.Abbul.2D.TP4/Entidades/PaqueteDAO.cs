@@ -22,23 +22,23 @@ namespace Entidades
         {
             try
             {
+                string query;
+
+                //conexion.ConnectionString = conexionParaSqlServer;
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
-                //conexionParaSqlServer
 
-                string cadena;
-                cadena = String.Format("INSERT INTO Paquetes (direccionEntrega,trakingID,alumno) VALUES ('{0}',{1},'{2}'", p.DireccionEntrega, p.TrackingID, "Rodriguez_Abbul_2D");
+                query = String.Format("INSERT INTO Paquetes (direccionEntrega,trakingID,alumno) VALUES ('{0}',{1},'{2}'", p.DireccionEntrega, p.TrackingID, "Rodriguez_Abbul_2D");
 
-                comando.CommandText = cadena;
+                comando.CommandText = query;
                 conexion.Open();
 
                 return (comando.ExecuteNonQuery() > 0) ? true : false;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new BaseDeDatosException(ex.Message);
             }
-
         }
     }
 }

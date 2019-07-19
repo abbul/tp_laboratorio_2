@@ -92,7 +92,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(21, 116);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(155, 22);
-            this.txtDireccion.TabIndex = 7;
+            this.txtDireccion.TabIndex = 2;
             // 
             // mtxtTrackingID
             // 
@@ -100,7 +100,7 @@
             this.mtxtTrackingID.Mask = "000-000-0000";
             this.mtxtTrackingID.Name = "mtxtTrackingID";
             this.mtxtTrackingID.Size = new System.Drawing.Size(155, 22);
-            this.mtxtTrackingID.TabIndex = 4;
+            this.mtxtTrackingID.TabIndex = 1;
             // 
             // label5
             // 
@@ -125,7 +125,7 @@
             this.btnMostarTodos.Location = new System.Drawing.Point(197, 108);
             this.btnMostarTodos.Name = "btnMostarTodos";
             this.btnMostarTodos.Size = new System.Drawing.Size(95, 39);
-            this.btnMostarTodos.TabIndex = 1;
+            this.btnMostarTodos.TabIndex = 4;
             this.btnMostarTodos.Text = "Mostrar";
             this.btnMostarTodos.UseVisualStyleBackColor = true;
             this.btnMostarTodos.Click += new System.EventHandler(this.BtnMostarTodos_Click);
@@ -135,7 +135,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(197, 41);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(95, 42);
-            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
@@ -148,6 +148,7 @@
             this.ltsEstadoEntregado.Name = "ltsEstadoEntregado";
             this.ltsEstadoEntregado.Size = new System.Drawing.Size(274, 260);
             this.ltsEstadoEntregado.TabIndex = 5;
+            this.ltsEstadoEntregado.SelectedIndexChanged += new System.EventHandler(this.LtsEstadoEntregado_SelectedIndexChanged);
             // 
             // ltsEstadoViajando
             // 
@@ -166,7 +167,6 @@
             this.ltsEstadoIngresado.Name = "ltsEstadoIngresado";
             this.ltsEstadoIngresado.Size = new System.Drawing.Size(274, 260);
             this.ltsEstadoIngresado.TabIndex = 3;
-            this.ltsEstadoIngresado.SelectedIndexChanged += new System.EventHandler(this.LtsEstadoIngresado_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -204,7 +204,6 @@
             this.Name = "FrmPpal";
             this.Text = "Correo UTN por Abbul.Rodriguez.D";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPpal_FormClosed);
-            this.Load += new System.EventHandler(this.FrmPpal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -8,12 +8,8 @@ namespace Entidades
 {
     public class BaseDeDatosException : Exception
     {
-        public BaseDeDatosException()
-        {
-
-        }
         public BaseDeDatosException(string mensaje)
-                : base(String.Format("Error: {0}", mensaje))
+                : base(mensaje)
         {
 
         }

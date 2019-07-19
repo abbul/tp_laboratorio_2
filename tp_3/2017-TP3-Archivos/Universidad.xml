@@ -5,8 +5,8 @@ NACIONALIDAD:Argentino
 Legajo Numero: 2
 
 Clases del dia: 
+Laboratorio
 Programacion
-Legislacion
 
 ALUMNOS: 
 NOMBRE COMPLETO: Lopez , Juan
@@ -27,10 +27,10 @@ TOMA CLASE DE: Programacion
 
 <------------------------------------------->
 
-CLASE DE Programacion POR NOMBRE COMPLETO: Lopez , Juan
+CLASE DE Programacion POR NOMBRE COMPLETO: Juarez , Roberto
 NACIONALIDAD:Argentino
 
-Legajo Numero: 1
+Legajo Numero: 2
 
 Clases del dia: 
 Laboratorio
@@ -55,10 +55,10 @@ TOMA CLASE DE: Laboratorio
 
 <------------------------------------------->
 
-CLASE DE Programacion POR NOMBRE COMPLETO: Juarez , Roberto
+CLASE DE Programacion POR NOMBRE COMPLETO: Lopez , Juan
 NACIONALIDAD:Argentino
 
-Legajo Numero: 2
+Legajo Numero: 1
 
 Clases del dia: 
 Programacion

@@ -45,7 +45,7 @@ namespace EntidadesInstanciables
         public Jornada this[int i] {
 
             get {
-                return jornadas[i];
+                return (i >= 0 && jornadas.Count >= i) ? jornadas[i] : null;
             }
 
             set {

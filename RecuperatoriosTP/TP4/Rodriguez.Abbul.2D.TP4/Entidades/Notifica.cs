@@ -13,7 +13,7 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             string info;
-            path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Reporte.txt";
+            path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\reporte.txt";
 
             sb.AppendLine("TIPO DE ERROR:" + Convert.ToString(tipo) );
             sb.AppendLine("DESCRIPCION:" + cadena);

@@ -66,18 +66,12 @@ namespace Entidades
                 }
                 else
                 {
-                    throw new TrackingIdRepetidoException("El Traking ID " + p.TrackingID + "ya figura en la lista de envios");
+                    throw new TrackingIdRepetidoException("El Traking ID: '" + p.TrackingID + "' ya figura en la lista de envios");
                 }
-            }
-            catch (BaseDeDatosException error)
-            {
-
-                throw error;
             }
 
             catch (Exception error)
             {
-
                 throw error;
             }
 

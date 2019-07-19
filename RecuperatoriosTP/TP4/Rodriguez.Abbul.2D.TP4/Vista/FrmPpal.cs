@@ -18,6 +18,8 @@ namespace Vista
         {
             InitializeComponent();
             correo = new Correo();
+            mtxtTrackingID.Select();
+
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -39,13 +41,13 @@ namespace Vista
                 }
                 
             }
-            catch (BaseDeDatosException error)
+            catch (TrackingIdRepetidoException error)
             {
-                MessageBox.Show("Error db: " + error.Message);
+                MessageBox.Show(error.Message);
             }
-            catch (Exception)
+            catch (Exception error)
             {
-                MessageBox.Show("Ya existe ese Tracking ID. ID ingresado:" + mtxtTrackingID.Text);
+                MessageBox.Show(error.Message);
             }
 
             ActualizarEstados();
@@ -92,11 +94,6 @@ namespace Vista
             }
         }
 
-        private void FrmPpal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmPpal_FormClosed(object sender, FormClosedEventArgs e)
         {
             correo.FinEntregas();
@@ -107,21 +104,23 @@ namespace Vista
             MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
         }
 
-        private void LtsEstadoIngresado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
             if (elemento != null)
             {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\salida.txt";
                 string retornaString = elemento.MostrarDatos(elemento);
                 rtbMostrar.Text = retornaString;
 
-                retornaString.Guardar("salida.txt");
+                retornaString.Guardar(path);
             }
         }
 
+        private void LtsEstadoEntregado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            MostrarInformacion<Paquete>((IMostrar<Paquete>)ltsEstadoEntregado.SelectedItem);
+
+        }
     }
 }
