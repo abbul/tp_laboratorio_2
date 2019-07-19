@@ -25,6 +25,8 @@ namespace Entidades
                 string query;
 
                 //conexion.ConnectionString = conexionParaSqlServer;
+                conexion.ConnectionString = "Data Source=./SQLExpress;Initial Catalog =correo-sp-2017;Integrated Security=True";
+
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
 
