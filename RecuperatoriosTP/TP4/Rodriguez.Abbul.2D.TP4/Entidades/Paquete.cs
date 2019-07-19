@@ -64,9 +64,10 @@ namespace Entidades
 
                 PaqueteDAO.Insertar(this);
             }
-            catch (BaseDeDatosException ex)
+            catch (Exception ex)
             {
                 Notifica.Send(ex.Message, ETipoExcepcion.sql);
+                throw ex;
             }
 
         }

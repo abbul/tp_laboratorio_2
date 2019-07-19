@@ -11,6 +11,8 @@ namespace Entidades
     {
         private static SqlConnection conexion;
         private static SqlCommand comando;
+        public delegate void DelegadoSQL(string mensaje);
+        public static event DelegadoSQL eventoDeSQL;
 
         static PaqueteDAO()
         {
@@ -25,7 +27,7 @@ namespace Entidades
                 string query;
 
                 //conexion.ConnectionString = conexionParaSqlServer;
-                conexion.ConnectionString = "Data Source=./SQLExpress;Initial Catalog =correo-sp-2017;Integrated Security=True";
+                conexion.ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog =correo-sp-2017; Integrated Security = True";
 
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.Connection = conexion;
@@ -37,9 +39,14 @@ namespace Entidades
 
                 return (comando.ExecuteNonQuery() > 0) ? true : false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw new BaseDeDatosException(ex.Message);
+                PaqueteDAO.eventoDeSQL("ERROR al insertar en base de datos");
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
     }

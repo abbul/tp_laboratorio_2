@@ -19,6 +19,7 @@ namespace Vista
             InitializeComponent();
             correo = new Correo();
             mtxtTrackingID.Select();
+            PaqueteDAO.eventoDeSQL += new PaqueteDAO.DelegadoSQL(MostrarMensajeDeError);
 
         }
 
@@ -121,6 +122,11 @@ namespace Vista
 
             MostrarInformacion<Paquete>((IMostrar<Paquete>)ltsEstadoEntregado.SelectedItem);
 
+        }
+
+        public void MostrarMensajeDeError(string mensaje)
+        {
+            MessageBox.Show(mensaje);
         }
     }
 }
